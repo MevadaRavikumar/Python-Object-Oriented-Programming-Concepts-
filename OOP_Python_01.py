@@ -22,11 +22,16 @@ class Computer:
     * The size of an object depends on no. of variables and soze of variables
     * __init__ method decides the allocation and size if the attribuits in the systems heap memory
     * self is a default parameter which takes instances as a value 
-    """  
+    * two type of variables 1. Instance variable = values depends on object or instance, one instances variable chang is not depend on another
+                            2. Class variable= company is class variable, if this variable got changed it affects all the instances or class
+                            
+    """ 
+    company = 'acer' # class or static variable
+    
     def __init__ (self, CPU, RAM, HD):
-        self.CPU = CPU
-        self.RAM = RAM
-        self.HD = HD
+        self.CPU = CPU # instance variable 
+        self.RAM = RAM # instance variable 
+        self.HD = HD   # instance variable 
         
     def config (self):
         print ("CPU is ", self.CPU,"RAM is", self.RAM, "HD is", self.HD)
@@ -41,11 +46,16 @@ computer2 = Computer('i7', '16GB', '500 GB')
 computer1.CPU = 'i7'
 computer2.RAM = '4GB'
 
+# changing class or static variable 
+Computer.company = 'lenovo'
+
 # you can know the type of the object 
 print (type (computer1))
+print (computer1.company)
+print (computer2.company)
 
 # calling the method of the class
-#class name. method name(object name) 
+#class name. method name(object name)  
 Computer.config(computer1)
 #or
 # object name.method()  [Normally this convention is used]
