@@ -38,6 +38,20 @@ class C(B):
         print ("This is method 5")
     def method6(self):
         print ("This is method 6")
+
+# Here class D is not inheriting any class        
+class D():
+    def method7(self):
+        print ("This is method 7")
+    def method8(self):
+        print ("This is method 8")
+        
+# Here class E is inheriting class D and C
+class E(C,D):
+    def method9(self):
+        print ("This is method 9")
+    def method10(self):
+        print ("This is method 10")
         
 # Here class A is only having method 1&2 because class A is not inheriting class B
 a = A()
@@ -61,3 +75,18 @@ c.method3()
 c.method4()
 c.method5()
 c.method6()
+
+# class E will have all the methods of Class A, B, C and D and also its own
+# This is called multiple inheritance
+e= E()
+e.method1()
+e.method2()
+e.method3()
+e.method4()
+e.method5()
+e.method6()
+e.method7()
+e.method8()
+e.method9()
+e.method10()
+
