@@ -177,5 +177,30 @@ s1 = Student (56,78)
 print (s1.sum(5,9))  # what if you want to pass three or four or one numbers? you need to make another method which takes three arguments
 # now it is possible to call the method with parameters from 1 to 3 
 print (s1.sum(5))
-print (s1.sum(5,9))
+print (s1.sum(5,9)) 
 print (s1.sum(5,9,15))
+
+# Method overriding
+"""
+this concept is used in inheritance when sub and super class is having same method 
+then sub class's object will always execute the method which got codded in sub class not from the supre class
+"""
+class A:
+    def show (self):
+        print ("in A show")
+class B(A): 
+    def show (self):
+        print ("in B show")
+
+a = B()
+a.show()  
+"""
+the object of class B, will first search show method in class B
+then it goes to class A if the class B dose not have show mwthod
+you can see by removing show method from class B and just type pass and try to execute the code again 
+"""
+
+
+        
+
+
