@@ -143,10 +143,31 @@ s2 = Student (34,98)
 """
 if you want to add that two students marks 
 Ex: s3 = s1 + s2
-it will give you an error of unsupported operand types, beause there is no add method in the Student calss
+it will give you an error of unsupported operand types, beause there is no add method in the Student class
 but it is possible to define the method, which is called operator overloading 
 """
 # Now it is possible to add , in the same way you can define other method like multiplication, greater, substraction, etc
 s3 = s1 +s2
 print (s3.m1)
 print (s3.m2)
+
+
+# Method overloading
+"""
+lets say we have one Student class in which we have two methods def avf (a,b) and def avg (a,b,c), one is taking two parameters and one is three, this is called as method overloading
+in Python we do not have this facility bydefalut
+but there is a way to do that
+"""
+class Student:
+    
+    def __init__ (self, m1, m2):
+        self.m1 = m1
+        self.m2 = m2
+    def sum (self, a, b):
+        s = a+b
+        return s
+ 
+s1 = Student (56,78)
+print (s1.sum(5,9))  # what if you want to pass three or four or one numbers? you need to make another method which takes three arguments
+
+
