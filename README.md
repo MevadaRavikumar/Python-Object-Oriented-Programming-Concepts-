@@ -14,4 +14,20 @@
  11. Method overloading
  12. Method overriding
 
+## Some useful commands for version control via git bash
+
++ Link to download git 
+https://git-scm.com/downloads
++ Configuring user name = git config --global user.name "Your user name of github" 
++ Configuring user email = git config --global user.email "Your user email of github" 
++ To view git config file = git config --global -e
++ To list git config = git config --global --list
++ Configuring p4merge for visual comprison and merging 
+++ website: perforce.com
+++ Install visual merge tool from download section 
+++ To set p4merge as graphical compare tool 
++++ git config --global diff.tool p4merge
++++ git config --global difftool.p4merge.path "C:/Program Files/.../p4merge.exe" (user forward slashes)
++++ git config --global difftool.prompt false
+
 
