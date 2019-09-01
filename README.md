@@ -1,6 +1,6 @@
 # Python-Object-Oriented-Programming-Concepts
 
- Table of content: 
+## Table of content: 
  1. Class and object  
  2. __init__ method 
  3. Constructor, self and comparing objects 
