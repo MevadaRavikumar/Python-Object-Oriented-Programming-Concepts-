@@ -163,11 +163,19 @@ class Student:
     def __init__ (self, m1, m2):
         self.m1 = m1
         self.m2 = m2
-    def sum (self, a, b):
-        s = a+b
-        return s
+    def sum (self, a=None, b=None, c = None):
+       s = 0
+       if a!= None and b != None and c != None:
+           s = a+b+c
+       elif a!= None and b!= None:
+           s = a+b
+       else :
+           s = a
+       return s
  
 s1 = Student (56,78)
 print (s1.sum(5,9))  # what if you want to pass three or four or one numbers? you need to make another method which takes three arguments
-
-
+# now it is possible to call the method with parameters from 1 to 3 
+print (s1.sum(5))
+print (s1.sum(5,9))
+print (s1.sum(5,9,15))
